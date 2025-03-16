@@ -723,36 +723,6 @@ app.post('/reset-password', async (req, res) => {
     res.status(500).json({message: 'Server error'});
   }
 });
-
-
-// whatsapp Otp varification 
-
-
-// app.post('/Whatsapp-Login', async (req, res) => {
-//   // console.log(hey)
-//   const {PNnumber} = req.body;
-//   console.log(PNnumber);
-//   const OldUser = await User.find({phoneNumber: PNnumber});
-//   console.log(OldUser + ' old user details');
-//   const userDetails = OldUser;
-//   if (!OldUser) {
-//     return res.status(404).send({data: 'User not found'});
-//   }
-//   else{
-//     // return res.status(200).send({data:})
-//     return res.status(201).send({
-//           status: 'ok',
-//           data: {
-//             // token,
-//             UserID: OldUser._id,
-//             userType: 'user', // Regular user type
-//             UserAllDetails: userDetails,
-//           },
-//         });
-//   }
-// });
-
-
 app.post('/Whatsapp-Login', async (req, res) => {
   // console.log('hey')
   try {
